@@ -1,11 +1,11 @@
 let precio = 400000
 let cantidad = 0
 
-precioSpan = document.querySelector(".precio-inicial");
-precioSpan.innerHTML = precio
+// precioSpan = document.querySelector(".precio-inicial");
+// precioSpan.innerHTML = precio
 
-let resta = document.getElementById('resta');
-resta.disable = true
+// let resta = document.getElementById('resta');
+// resta.disable = true
 
 
 
@@ -29,13 +29,16 @@ function restar(valuePar){
         cantidad--;
     }
     document.getElementById('cantidad').textContent = cantidad;
-    if (total == 0) {
-        total = 0
-        document.getElementById('resta')
-        resta.disable = true
+
+    if (cantidad == 0) {
+        // total = 0
+        console.log(cantidad == 0)
+        resta = document.querySelector('resta')
+        resta.innerHTML = button.enable = false
 
     } else{
-        total = precio / cantidad
+        total = (precio * cantidad)
+        
     }
     document.getElementById('valor-total').textContent = total
 }

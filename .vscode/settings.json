@@ -1,6 +1,23 @@
 {
   "cSpell.words": [
+    "agregar",
+    "cantidad",
+    "inicial",
+    "precio",
+    "resta",
+    "restar",
     "resultadocantidad",
+    "suma",
     "valoraumentado"
+  ],
+  "spellright.language": [
+    "es",
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "javascript"
   ]
 }
