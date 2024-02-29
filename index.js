@@ -2,40 +2,36 @@ let precio = 400000;
 let cantidad = 0;
 
 precioSpan = document.querySelector(".precio-inicial");
-precioSpan.innerHTML = precio;
+precioSpan.innerHTML = Intl.NumberFormat('es-419').format(precio);
 
 function agregar(valuePar) {
-  document.getElementById("cantidad").value;
-  if (valuePar.value == "suma") {
-    cantidad--;
-  } else {
-    cantidad++;
-  }
+  cantidad++;
 
-  document.getElementById("cantidad").textContent = cantidad;
+  cantidadTotal = document.querySelector(".cantidad"); 
+  cantidadTotal.innerHTML = Intl.NumberFormat('es-419').format(cantidad);
   total = precio * cantidad;
 
-  document.getElementById("valor-total").textContent = total;
-  console.log(cantidad + " " + total + " sumando");
+  document.getElementById("valor-total").textContent = Intl.NumberFormat('es-419').format(total);
+  //   console.log(cantidad + " " + total + " sumando");
 }
 
 function restar(valuePar) {
-  document.getElementById("cantidad").value;
-  if (valuePar.value == "resta") {
-    cantidad++;
-  } else {
-    cantidad--;
-  }
+  cantidad--;
+
   document.getElementById("cantidad").textContent = cantidad;
 
   if (cantidad <= 0) {
     total = 0;
     cantidad = 0;
-    document.getElementById("valor-total").textContent = total;
+
+    valorTotal = document.querySelector(".valor-total"); 
+    valorTotal.innerHTML = Intl.NumberFormat('es-419').format(total);
+    
     document.getElementById("cantidad").textContent = 0;
+    
   } else {
     total = precio * cantidad;
-    console.log(cantidad + " " + total + " restando");
+    // console.log(cantidad + " " + total + " restando");
   }
-  document.getElementById("valor-total").textContent = total;
+  document.getElementById("valor-total").textContent = Intl.NumberFormat('es-419').format(total);
 }

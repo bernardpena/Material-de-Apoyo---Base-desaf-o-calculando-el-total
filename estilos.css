@@ -24,6 +24,11 @@ body {
     justify-content: space-between;
 }
 
+p .precio-inicial{
+    color:  blue;
+    font-weight: bold;
+}
+
 .card .img-card {
     height: 100px;
     background-image: url("https://www.amd.com/system/files/2020-05/461767_MSI_Bravo_17_AMD_laptop_1260x709_0.png");
@@ -56,6 +61,11 @@ body {
 
 .total-section .color {
     display: flex;
+}
+
+p .valor-total {
+    color: blue;
+    font-weight: bold;
 }
 
 .total-section .color div{
