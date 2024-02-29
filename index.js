@@ -6,7 +6,6 @@ precioSpan.innerHTML = Intl.NumberFormat('es-419').format(precio);
 
 function agregar(valuePar) {
   cantidad++;
-
   cantidadTotal = document.querySelector(".cantidad"); 
   cantidadTotal.innerHTML = Intl.NumberFormat('es-419').format(cantidad);
   total = precio * cantidad;
@@ -17,8 +16,8 @@ function agregar(valuePar) {
 
 function restar(valuePar) {
   cantidad--;
-
-  document.getElementById("cantidad").textContent = cantidad;
+  cantidadTotal = document.querySelector(".cantidad"); 
+  cantidadTotal.innerHTML = Intl.NumberFormat('es-419').format(cantidad);
 
   if (cantidad <= 0) {
     total = 0;
@@ -26,9 +25,8 @@ function restar(valuePar) {
 
     valorTotal = document.querySelector(".valor-total"); 
     valorTotal.innerHTML = Intl.NumberFormat('es-419').format(total);
-    
     document.getElementById("cantidad").textContent = 0;
-    
+
   } else {
     total = precio * cantidad;
     // console.log(cantidad + " " + total + " restando");
