@@ -45,12 +45,17 @@ p .precio-inicial{
 }
 
 
-
 .card button {
     background: #e2a30b;
     color: white;
+    font-size: 20px;
     border-radius: 5px;
     padding: 4px 8px;
+    width: 30px;
+}
+
+.card button:hover{
+    cursor: pointer;
 }
 
 .total-section {
@@ -66,6 +71,10 @@ p .precio-inicial{
 p .valor-total {
     color: blue;
     font-weight: bold;
+}
+
+p span{
+    margin-right: 5px;
 }
 
 .total-section .color div{
